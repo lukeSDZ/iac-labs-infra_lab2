@@ -1,6 +1,6 @@
-name: zad2
+name: zadanie2
 runtime:
   name: python
   options:
     virtualenv: venv
-description: A minimal Python Pulumi program
+description: wlasciwie to zadanie 5.lab2

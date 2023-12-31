@@ -15,6 +15,12 @@ resource "docker_image" "nginx" {
   name         = "nginx:latest"
   keep_locally = false
 }
+
+resource "docker_tag" "nginx_latest" {
+  source_image  = docker_image.nginx.latest
+  target_image  = "nginx:new-tag"  # Nowa etykietka
+}
+
 resource "docker_container" "nginx" {
   image = docker_image.nginx.latest
   name  = "tutorial"

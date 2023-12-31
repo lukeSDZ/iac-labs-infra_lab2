@@ -7,11 +7,12 @@ resource "docker_image" "example_app" {
       platform : "linux/amd64"
     }
     label = {
-      author : "student"
+      author : "lukasz"
     }
   }
 }
 
-# resource "docker_image" "postgres" {
-#   Uzupenij
-# }
+resource "docker_image" "postgres" {
+  name = "postgres"
+  keep_locally = false
+}
